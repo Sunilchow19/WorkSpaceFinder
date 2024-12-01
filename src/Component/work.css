@@ -1,0 +1,15 @@
+.register-heading {
+    font-size: 36px;  /* Larger font size */
+    color: #333;      /* Dark color for the text */
+    text-align: center;  /* Center the text */
+    font-family: 'Arial', sans-serif;  /* Clean and modern font */
+    margin-top: 20px;   /* Space above the heading */
+    margin-bottom: 20px;  /* Space below the heading */
+    font-weight: bold;   /* Bold text */
+    text-transform: uppercase;  /* Capitalized text */
+    letter-spacing: 2px;   /* Slightly increase space between letters */
+    padding: 10px;       /* Padding around the heading */
+    background-color: #f4f4f4;  /* Light background color for the heading */
+    border-radius: 8px;    /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Light shadow for depth */
+  }
