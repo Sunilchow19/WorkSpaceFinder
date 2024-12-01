@@ -19,7 +19,7 @@ function Seemore() {
       "image5": "https://th.bing.com/th/id/OIP.DQ27PZP9iGebs3JR6evnoAHaE8?w=209&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7",
       "price": 15,
       "locationName": "Downtown Street, City Center",
-      "location": "https://goo.gl/maps/sample1"
+      "location": "https://maps.app.goo.gl/hJcVopGEm2tYdxC16"
     },
     {
       "id": 2,
@@ -32,7 +32,7 @@ function Seemore() {
       "image5": "https://myperfectworkplace.com/sites/default/files/styles/original_image/public/2020-10-06/01515_8O9KJZYFhdc_600x450.jpg?itok=I9p18fDb",
       "price": 25,
       "locationName": "High Tower, Business District",
-      "location": "https://goo.gl/maps/sample2"
+      "location": "https://maps.app.goo.gl/hJcVopGEm2tYdxC16"
     },
     {
       "id": 3,
@@ -45,7 +45,7 @@ function Seemore() {
       "image5": "https://i.pinimg.com/originals/35/6c/e3/356ce32d11870a114f3bb61874c45f05.jpg",
       "price": 10,
       "locationName": "Central Library, Main Road",
-      "location": "https://goo.gl/maps/sample3"
+      "location": "https://maps.app.goo.gl/hJcVopGEm2tYdxC16"
     },
     {
       "id": 4,
@@ -58,7 +58,7 @@ function Seemore() {
       "image5": "https://www.architectureartdesigns.com/wp-content/uploads/2015/03/244.jpg",
       "price": 30,
       "locationName": "Palm Beach Avenue",
-      "location": "https://goo.gl/maps/sample4"
+      "location": "https://maps.app.goo.gl/hJcVopGEm2tYdxC16"
     },
     {
       "id": 5,
@@ -71,7 +71,7 @@ function Seemore() {
       "image5": "https://wpcdn.us-midwest-1.vip.tn-cloud.net/www.mountainliving.com/content/uploads/2020/12/36-Quartz-AR-198-1603-scaled.jpg",
       "price": 35,
       "locationName": "Evergreen Valley",
-      "location": "https://goo.gl/maps/sample5"
+      "location": "https://maps.app.goo.gl/hJcVopGEm2tYdxC16"
     },
     {
       "id": 6,
@@ -84,7 +84,7 @@ function Seemore() {
       "image5": "https://www.brightview.com/sites/default/files/inline-images/Rooftop%20Terrace%20Workspace.jpg",
       "price": 20,
       "locationName": "Sunset Boulevard",
-      "location": "https://goo.gl/maps/sample6"
+      "location": "https://maps.app.goo.gl/hJcVopGEm2tYdxC16"
     },
     {
       "id": 7,
@@ -97,7 +97,7 @@ function Seemore() {
       "image5": "https://img.freepik.com/premium-photo/industrial-loft-workspace-design-generative-ai_893610-2622.jpg",
       "price": 28,
       "locationName": "Urban Industrial Zone",
-      "location": "https://goo.gl/maps/sample7"
+      "location": "https://maps.app.goo.gl/hJcVopGEm2tYdxC16"
     },
     {
       "id": 8,
@@ -110,7 +110,7 @@ function Seemore() {
       "image5": "https://i.pinimg.com/736x/cd/9d/10/cd9d109a83bd0c21a21c48f15abdea73.jpg",
       "price": 22,
       "locationName": "Tech Park, Downtown",
-      "location": "https://goo.gl/maps/sample8"
+      "location": "https://maps.app.goo.gl/hJcVopGEm2tYdxC16"
     },
     {
       "id": 9,
@@ -123,7 +123,7 @@ function Seemore() {
       "image5": "https://www.rochester.edu/newscenter/wp-content/uploads/2018/02/fea-Sibley-building-high-tech-rochester.jpg",
       "price": 40,
       "locationName": "Innovation District",
-      "location": "https://goo.gl/maps/sample9"
+      "location": "https://maps.app.goo.gl/hJcVopGEm2tYdxC16"
     }
 ];
 
