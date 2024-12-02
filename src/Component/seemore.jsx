@@ -5,7 +5,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Heading from "./heading";
 import Footer from "./footer";
-import styles from "./seemore.module.css"
+import styles from "../Styles/seemore.module.css"
 
 function Seemore() {
   const { id } = useParams();
@@ -194,7 +194,7 @@ function Seemore() {
         <p>Loading...</p>
       )}
     </div>
-    <Footer/>
+    {/* <Footer/> */}
     </>
   );
 }

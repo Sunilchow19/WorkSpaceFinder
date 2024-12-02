@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Heading from "./heading";
-import "./WorkSpaceFinder.css";
+import "../Styles/WorkSpaceFinder.css";
 import { Link } from "react-router-dom";
 import Footer from "./footer";
 

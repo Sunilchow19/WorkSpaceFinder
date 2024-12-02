@@ -7,7 +7,7 @@
     padding: 20px;
     box-sizing: border-box;
   }
-
+  
   .onDiv {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer; /* Indicates interactivity */
@@ -17,7 +17,6 @@
     transform: scale(1.05);  /* Slightly enlarges the container */
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);  /* Adds a shadow */
   }
-  
   
   .card {
     max-width: 700px;
@@ -85,5 +84,72 @@
   .loading {
     font-size: 18px;
     color: #555555;
+  }
+  
+  /* Responsive styles for mobile screens */
+  @media (max-width: 768px) {
+    .container {
+      padding: 10px;  /* Reduce padding */
+    }
+  
+    .card {
+      padding: 15px;  /* Adjust padding */
+      border-radius: 10px;
+    }
+  
+    .image-container {
+      height: 250px;  /* Reduce image container height */
+    }
+  
+    .image {
+      height: 250px;  /* Adjust image height */
+      border-radius: 8px;
+    }
+  
+    .title {
+      font-size: 22px;  /* Reduce title size */
+      margin: 10px 0;
+    }
+  
+    .detail {
+      font-size: 18px;  /* Adjust detail size */
+    }
+  
+    .description,
+    .location {
+      font-size: 14px;  /* Reduce font size */
+    }
+  
+    .link {
+      font-size: 14px;  /* Adjust link font size */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .card {
+      padding: 10px;  /* Smaller padding */
+    }
+  
+    .image-container {
+      height: 200px;  /* Smaller image height */
+    }
+  
+    .image {
+      height: 200px;
+    }
+  
+    .title {
+      font-size: 20px;
+    }
+  
+    .detail,
+    .description,
+    .location {
+      font-size: 13px;
+    }
+  
+    .link {
+      font-size: 12px;
+    }
   }
   

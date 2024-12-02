@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import Heading from './heading';
-import "./homepage.css"
+import "../Styles/homepage.css"
 
 const HomePage = () => {
   return (

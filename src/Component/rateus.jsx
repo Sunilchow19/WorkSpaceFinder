@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./work.css";
+import "../Styles/rateus.css";
 
 function RateUsForm() {
   const [rating, setRating] = useState(0);
