@@ -3,6 +3,8 @@ import { useParams } from "react-router-dom";
 import Slider from "react-slick";  // Import Slider
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import Heading from "./heading";
+import Footer from "./footer";
 
 function Seemore() {
   const { id } = useParams();
@@ -17,9 +19,9 @@ function Seemore() {
       "image3": "https://i.pinimg.com/originals/45/be/14/45be142f2ce17a2594892bab6a8f0316.jpg",
       "image4": "https://th.bing.com/th/id/OIP.p10eoxD9D4ek-L3sGwNTjgHaE7?w=246&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7",
       "image5": "https://th.bing.com/th/id/OIP.DQ27PZP9iGebs3JR6evnoAHaE8?w=209&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7",
-      "price": 15,
-      "locationName": "Downtown Street, City Center",
-      "location": "https://maps.app.goo.gl/hJcVopGEm2tYdxC16"
+      "price": 400,
+      "locationName": "Roastery Coffee House 82, 418, 287/12, Road No. 14, Banjara Hills, Hyderabad, Telangana 500034",
+      "location": "https://maps.app.goo.gl/zv4q2ivuSp8kBg1f6"
     },
     {
       "id": 2,
@@ -30,9 +32,9 @@ function Seemore() {
       "image3": "https://offices.net/officeimages/22983_4.jpg",
       "image4": "https://mlczkkc65aeb.i.optimole.com/cb:nuYn~24b7a/w:auto/h:auto/q:mauto/ig:avif/https://office.hr/wp-content/uploads/2023/08/20230831_095804.jpg",
       "image5": "https://myperfectworkplace.com/sites/default/files/styles/original_image/public/2020-10-06/01515_8O9KJZYFhdc_600x450.jpg?itok=I9p18fDb",
-      "price": 25,
-      "locationName": "High Tower, Business District",
-      "location": "https://maps.app.goo.gl/hJcVopGEm2tYdxC16"
+      "price": 2500,
+      "locationName": "Gachibowli,IT Park,Hyderabad",
+      "location": "https://maps.app.goo.gl/8ZmrUYq5gPrvMw8U8"
     },
     {
       "id": 3,
@@ -43,9 +45,9 @@ function Seemore() {
       "image3": "https://library.princeton.edu/sites/default/files/news/images/SMS_6071%20LR.jpg",
       "image4": "https://bowa.com/wp-content/uploads/2016/07/HAN_HAN-Great-Falls-VA-Library2-a.jpg",
       "image5": "https://i.pinimg.com/originals/35/6c/e3/356ce32d11870a114f3bb61874c45f05.jpg",
-      "price": 10,
-      "locationName": "Central Library, Main Road",
-      "location": "https://maps.app.goo.gl/hJcVopGEm2tYdxC16"
+      "price": 1500,
+      "locationName": "Level 7, Octave 3B, Salarpuria Sattva Knowledge City,Hyderabad, TS",
+      "location": "https://maps.app.goo.gl/wiTv7uFWuKi2gr6d8"
     },
     {
       "id": 4,
@@ -56,9 +58,9 @@ function Seemore() {
       "image3": "https://barrister-suites.com/wp-content/uploads/2018/02/100-wilshire-blvd-700-3-003-1024x683.jpg",
       "image4": "https://th.bing.com/th/id/R.072fc2d0799866b32200a1f6c8182910?rik=D2fTOJQXFveLAA&riu=http%3a%2f%2fcdn.home-designing.com%2fwp-content%2fuploads%2f2013%2f04%2fTropical-Beach-Villa-dark-wood-framed-open-plan-living-and-workspace-with-distant-ocean-views.jpeg&ehk=Dwm0pdEfrt41cr2ha0TnADL0ZdmbK2Pjl%2fr%2bQhDVYJA%3d&risl=&pid=ImgRaw&r=0",
       "image5": "https://www.architectureartdesigns.com/wp-content/uploads/2015/03/244.jpg",
-      "price": 30,
-      "locationName": "Palm Beach Avenue",
-      "location": "https://maps.app.goo.gl/hJcVopGEm2tYdxC16"
+      "price": 3000,
+      "locationName": "Roba Beach Side Cafe, Aadi Kadalayi Nada, Kannur, Kerala, India",
+      "location": "https://maps.app.goo.gl/9jXoWCvWvkznXwRYA"
     },
     {
       "id": 5,
@@ -69,9 +71,9 @@ function Seemore() {
       "image3": "https://th.bing.com/th/id/R.4e42af951bda073680e63630c72482e6?rik=t%2btc11Lnkfx7xQ&riu=http%3a%2f%2fcdn.decoist.com%2fwp-content%2fuploads%2f2015%2f02%2fExquisite-home-office-with-amazing-mountain-view.jpg&ehk=imHAwQUKp1ARu15xtv9XyLPFnXOcGf7T04uVVuf9VAQ%3d&risl=&pid=ImgRaw&r=0",
       "image4": "https://www.mountainretreats.co.uk/wp-content/uploads/AJP_1084_5_6_7_8HDR.jpg",
       "image5": "https://wpcdn.us-midwest-1.vip.tn-cloud.net/www.mountainliving.com/content/uploads/2020/12/36-Quartz-AR-198-1603-scaled.jpg",
-      "price": 35,
-      "locationName": "Evergreen Valley",
-      "location": "https://maps.app.goo.gl/hJcVopGEm2tYdxC16"
+      "price": 4000,
+      "locationName": "Kuttiyamvayal, Padinjarathara,Wayanad, Kerala, 673575, India.",
+      "location": "https://maps.app.goo.gl/mzyQMepa7VNC8swi9"
     },
     {
       "id": 6,
@@ -82,9 +84,9 @@ function Seemore() {
       "image3": "https://i.pinimg.com/originals/d5/4b/f7/d54bf716f0ee7cc866e3d0a8d71ef050.jpg",
       "image4": "https://i.pinimg.com/originals/ae/ef/e1/aeefe17dbfb38f189efb14eeec9f56f6.jpg",
       "image5": "https://www.brightview.com/sites/default/files/inline-images/Rooftop%20Terrace%20Workspace.jpg",
-      "price": 20,
-      "locationName": "Sunset Boulevard",
-      "location": "https://maps.app.goo.gl/hJcVopGEm2tYdxC16"
+      "price": 4500,
+      "locationName": "Plot No 5, Survey No 62, 2nd Floor, Inorbit Mall Rd, HITEC City, Madhapur, Telangana 500081",
+      "location": "https://maps.app.goo.gl/7AeVe7CuLNbS7f2A7"
     },
     {
       "id": 7,
@@ -95,9 +97,9 @@ function Seemore() {
       "image3": "https://thumbs.dreamstime.com/b/luxury-workspace-office-decorated-industrial-loft-modern-interior-design-peculiar-ai-generative-image-luxury-workspace-office-267496908.jpg",
       "image4": "https://thumbs.dreamstime.com/b/luxury-workspace-office-decorated-industrial-loft-modern-interior-design-ai-generative-268157134.jpg",
       "image5": "https://img.freepik.com/premium-photo/industrial-loft-workspace-design-generative-ai_893610-2622.jpg",
-      "price": 28,
-      "locationName": "Urban Industrial Zone",
-      "location": "https://maps.app.goo.gl/hJcVopGEm2tYdxC16"
+      "price": 3400,
+      "locationName": "Durga Towers,Hyderabad",
+      "location": "https://maps.app.goo.gl/UmMTngfy1cqBDyFa7"
     },
     {
       "id": 8,
@@ -108,9 +110,9 @@ function Seemore() {
       "image3": "https://i.pinimg.com/originals/cd/22/a2/cd22a28c1634cd44f9267a457f9de582.jpg",
       "image4": "https://i.pinimg.com/736x/dc/4d/d2/dc4dd26eff48d32d3664b30c687dbbc2.jpg",
       "image5": "https://i.pinimg.com/736x/cd/9d/10/cd9d109a83bd0c21a21c48f15abdea73.jpg",
-      "price": 22,
-      "locationName": "Tech Park, Downtown",
-      "location": "https://maps.app.goo.gl/hJcVopGEm2tYdxC16"
+      "price": 3000,
+      "locationName": " Vasavi MPM Grand,Ameerpet,Hyderabad",
+      "location": "https://maps.app.goo.gl/4xX5vy7HcC4uyDT79"
     },
     {
       "id": 9,
@@ -121,9 +123,9 @@ function Seemore() {
       "image3": "https://www.silkroad40.com/images/articles/nomadic-tech-incubator/silkroad-40-nomadic-tech-incubator-1.jpg",
       "image4": "https://www.csemag.com/wp-content/uploads/sites/5/2017/04/CSE1703_IMG_innovation_hubs_1.jpg",
       "image5": "https://www.rochester.edu/newscenter/wp-content/uploads/2018/02/fea-Sibley-building-high-tech-rochester.jpg",
-      "price": 40,
-      "locationName": "Innovation District",
-      "location": "https://maps.app.goo.gl/hJcVopGEm2tYdxC16"
+      "price": 4000,
+      "locationName": "Technology Innovation Park, IIT HYDERABAD, Kandi, Sangareddy , Telangana",
+      "location": "https://maps.app.goo.gl/i7EbCQkgyHYNuqmSA"
     }
 ];
 
@@ -178,6 +180,8 @@ function Seemore() {
   };
 
   return (
+    <>
+      <Heading/>
     <div style={styles.container}>
       {workspace ? (
         <div style={styles.card} key={workspace.id}>
@@ -203,17 +207,20 @@ function Seemore() {
           </Slider>
 
           <h1 style={styles.title}>{workspace.title}</h1>
-          <p style={styles.detail}><strong>Price:</strong> ${workspace.price}</p>
+          <p style={styles.detail}><strong>Price:</strong> {workspace.price}/hr</p>
           <p style={styles.description}>{workspace.description}</p>
-          <p style={styles.description}>{workspace.locationName}</p>
+          <p style={styles.description}><b>Location: </b>{workspace.locationName}</p>
           <a href={workspace.location} target="_blank" rel="noopener noreferrer" style={styles.link}>
             View Location
           </a>
+          
         </div>
       ) : (
         <p>Loading...</p>
       )}
     </div>
+    <Footer/>
+    </>
   );
 }
 
