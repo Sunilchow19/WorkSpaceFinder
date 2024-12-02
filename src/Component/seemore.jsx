@@ -5,6 +5,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Heading from "./heading";
 import Footer from "./footer";
+import styles from "./seemore.module.css"
 
 function Seemore() {
   const { id } = useParams();
@@ -149,71 +150,45 @@ function Seemore() {
     autoplaySpeed: 3000,
   };
 
-  const styles = {
-    container: {
-      display: "flex",
-      flexDirection: "column",
-      alignItems: "center",
-      padding: "20px",
-    },
-    card: {
-      width: "80%",
-      maxWidth: "600px",
-      border: "1px solid #ddd",
-      borderRadius: "10px",
-      boxShadow: "0 4px 10px rgba(0, 0, 0, 0.1)",
-      padding: "20px",
-      textAlign: "center",
-      marginBottom: "20px",
-      backgroundColor:"skyblue"
-    },
-    image: {
-      width: "100%",
-      height: "300px",
-      objectFit: "cover",
-      borderRadius: "10px 10px 0 0",
-    },
-    title: { fontSize: "2rem", margin: "10px 0" },
-    detail: { fontSize: "1.2rem", color: "#555", margin: "8px 0" },
-    description: { fontSize: "1rem", margin: "10px 0" },
-    link: { fontSize: "1.1rem", color: "#007BFF", textDecoration: "none" },
-  };
+
 
   return (
     <>
       <Heading/>
-    <div style={styles.container}>
+    <div className={styles.container}>
       {workspace ? (
-        <div style={styles.card} key={workspace.id}>
+        <div className={styles.onDiv}>
+          <div className={styles.card} key={workspace.id}>
           {/* Slider component */}
           <Slider {...settings}>
             {/* For demonstration, using the same image multiple times */}
             <div>
-              <img src={workspace.image1} alt={workspace.title} style={styles.image} />
+              <img src={workspace.image1} alt={workspace.title} className={styles.image} />
             </div>
             <div>
-              <img src={workspace.image2} alt={workspace.title} style={styles.image} />
+              <img src={workspace.image2} alt={workspace.title} className={styles.image} />
             </div>
             <div>
-              <img src={workspace.image3} alt={workspace.title} style={styles.image} />
+              <img src={workspace.image3} alt={workspace.title} className={styles.image} />
             </div>
              <div>
-              <img src={workspace.image4} alt={workspace.title} style={styles.image} />
+              <img src={workspace.image4} alt={workspace.title} className={styles.image} />
             </div>
              <div>
-              <img src={workspace.image5} alt={workspace.title} style={styles.image} />
+              <img src={workspace.image5} alt={workspace.title} className={styles.image} />
             </div>
             {/* Add more images if available in the workspace data */}
           </Slider>
 
-          <h1 style={styles.title}>{workspace.title}</h1>
-          <p style={styles.detail}><strong>Price:</strong> {workspace.price}/hr</p>
-          <p style={styles.description}>{workspace.description}</p>
-          <p style={styles.description}><b>Location: </b>{workspace.locationName}</p>
-          <a href={workspace.location} target="_blank" rel="noopener noreferrer" style={styles.link}>
+          <h1 className={styles.title}>{workspace.title}</h1>
+          <p className={styles.detail}><strong>Price:</strong> {workspace.price}/hr</p>
+          <p className={styles.description}>{workspace.description}</p>
+          <p className={styles.description}><b>Location: </b>{workspace.locationName}</p>
+          <a href={workspace.location} target="_blank" rel="noopener noreferrer" className={styles.link}>
             View Location
           </a>
           
+        </div>
         </div>
       ) : (
         <p>Loading...</p>
