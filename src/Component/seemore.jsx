@@ -22,7 +22,8 @@ function Seemore() {
       "image5": "https://th.bing.com/th/id/OIP.DQ27PZP9iGebs3JR6evnoAHaE8?w=209&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7",
       "price": 400,
       "locationName": "Roastery Coffee House 82, 418, 287/12, Road No. 14, Banjara Hills, Hyderabad, Telangana 500034",
-      "location": "https://maps.app.goo.gl/zv4q2ivuSp8kBg1f6"
+      "location": "https://maps.app.goo.gl/zv4q2ivuSp8kBg1f6",
+      // "sqft":"2"
     },
     {
       "id": 2,
@@ -35,7 +36,8 @@ function Seemore() {
       "image5": "https://myperfectworkplace.com/sites/default/files/styles/original_image/public/2020-10-06/01515_8O9KJZYFhdc_600x450.jpg?itok=I9p18fDb",
       "price": 2500,
       "locationName": "Gachibowli,IT Park,Hyderabad",
-      "location": "https://maps.app.goo.gl/8ZmrUYq5gPrvMw8U8"
+      "location": "https://maps.app.goo.gl/8ZmrUYq5gPrvMw8U8",
+      "sqft":"1200"
     },
     {
       "id": 3,
@@ -48,7 +50,8 @@ function Seemore() {
       "image5": "https://i.pinimg.com/originals/35/6c/e3/356ce32d11870a114f3bb61874c45f05.jpg",
       "price": 1500,
       "locationName": "Level 7, Octave 3B, Salarpuria Sattva Knowledge City,Hyderabad, TS",
-      "location": "https://maps.app.goo.gl/wiTv7uFWuKi2gr6d8"
+      "location": "https://maps.app.goo.gl/wiTv7uFWuKi2gr6d8",
+      "sqft":"3000"
     },
     {
       "id": 4,
@@ -61,7 +64,8 @@ function Seemore() {
       "image5": "https://www.architectureartdesigns.com/wp-content/uploads/2015/03/244.jpg",
       "price": 3000,
       "locationName": "Roba Beach Side Cafe, Aadi Kadalayi Nada, Kannur, Kerala, India",
-      "location": "https://maps.app.goo.gl/9jXoWCvWvkznXwRYA"
+      "location": "https://maps.app.goo.gl/9jXoWCvWvkznXwRYA",
+      "sqft":"1500"
     },
     {
       "id": 5,
@@ -74,7 +78,8 @@ function Seemore() {
       "image5": "https://wpcdn.us-midwest-1.vip.tn-cloud.net/www.mountainliving.com/content/uploads/2020/12/36-Quartz-AR-198-1603-scaled.jpg",
       "price": 4000,
       "locationName": "Kuttiyamvayal, Padinjarathara,Wayanad, Kerala, 673575, India.",
-      "location": "https://maps.app.goo.gl/mzyQMepa7VNC8swi9"
+      "location": "https://maps.app.goo.gl/mzyQMepa7VNC8swi9",
+      "sqft":"1700"
     },
     {
       "id": 6,
@@ -87,7 +92,8 @@ function Seemore() {
       "image5": "https://www.brightview.com/sites/default/files/inline-images/Rooftop%20Terrace%20Workspace.jpg",
       "price": 4500,
       "locationName": "Plot No 5, Survey No 62, 2nd Floor, Inorbit Mall Rd, HITEC City, Madhapur, Telangana 500081",
-      "location": "https://maps.app.goo.gl/7AeVe7CuLNbS7f2A7"
+      "location": "https://maps.app.goo.gl/7AeVe7CuLNbS7f2A7",
+      "sqft":"2000"
     },
     {
       "id": 7,
@@ -100,7 +106,8 @@ function Seemore() {
       "image5": "https://img.freepik.com/premium-photo/industrial-loft-workspace-design-generative-ai_893610-2622.jpg",
       "price": 3400,
       "locationName": "Durga Towers,Hyderabad",
-      "location": "https://maps.app.goo.gl/UmMTngfy1cqBDyFa7"
+      "location": "https://maps.app.goo.gl/UmMTngfy1cqBDyFa7",
+      "sqft":"1900"
     },
     {
       "id": 8,
@@ -113,7 +120,8 @@ function Seemore() {
       "image5": "https://i.pinimg.com/736x/cd/9d/10/cd9d109a83bd0c21a21c48f15abdea73.jpg",
       "price": 3000,
       "locationName": " Vasavi MPM Grand,Ameerpet,Hyderabad",
-      "location": "https://maps.app.goo.gl/4xX5vy7HcC4uyDT79"
+      "location": "https://maps.app.goo.gl/4xX5vy7HcC4uyDT79",
+      "sqft":"2500"
     },
     {
       "id": 9,
@@ -126,7 +134,8 @@ function Seemore() {
       "image5": "https://www.rochester.edu/newscenter/wp-content/uploads/2018/02/fea-Sibley-building-high-tech-rochester.jpg",
       "price": 4000,
       "locationName": "Technology Innovation Park, IIT HYDERABAD, Kandi, Sangareddy , Telangana",
-      "location": "https://maps.app.goo.gl/i7EbCQkgyHYNuqmSA"
+      "location": "https://maps.app.goo.gl/i7EbCQkgyHYNuqmSA",
+      "sqft":"5000"
     }
 ];
 
@@ -184,6 +193,7 @@ function Seemore() {
           <p className={styles.detail}><strong>Price:</strong> {workspace.price}/hr</p>
           <p className={styles.description}>{workspace.description}</p>
           <p className={styles.description}><b>Location: </b>{workspace.locationName}</p>
+          <p className={styles.description}>{workspace.sqft}sqft</p>
           <a href={workspace.location} target="_blank" rel="noopener noreferrer" className={styles.link}>
             View Location
           </a>
