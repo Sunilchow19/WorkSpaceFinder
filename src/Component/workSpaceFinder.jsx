@@ -3,6 +3,7 @@ import Heading from "./heading";
 import "../Styles/WorkSpaceFinder.css";
 import { Link } from "react-router-dom";
 import Footer from "./footer";
+import MapComponent from "./MapComponent";
 
 function WorkSpaceFinder() {
   // Static JSON data
@@ -191,6 +192,7 @@ function WorkSpaceFinder() {
      </div>
     }
       <br />
+      <MapComponent/>
       <Footer/>
     </>
   );
