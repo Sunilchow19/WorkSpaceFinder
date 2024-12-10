@@ -54,6 +54,26 @@
   @media (max-width: 768px) {
     .footer-sections {
       flex-direction: column;
+      margin-left: 1.5rem;
     }
+    .footer-title {
+      font-size: 45px;
+      font-weight: bold;
+      color: #ffffff;
+      opacity: 0.25;
+      
+    }
+    @media (min-width:768px) and (max-width: 1024px) {
+      .footer-sections {
+        flex-direction: column;
+        margin-left: 14rem;
+      }
+      .footer-title {
+        font-size: 70px;
+        font-weight: bold;
+        color: #ffffff;
+        opacity: 0.25;
+        
+      }
   }
-  
+}

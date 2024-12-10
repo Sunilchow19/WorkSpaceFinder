@@ -1,0 +1,68 @@
+/* General Styles */
+.navbar {
+    background-color: dodgerblue;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    height: 75px;
+  }
+  
+  .navbar-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0;
+  }
+  
+  .navbar-links {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .navbar-link {
+    text-decoration: none;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    transition: color 0.3s;
+  }
+  
+  .navbar-link:hover {
+    color: #ffcc00;
+  }
+  
+  .navbar-icon {
+    margin-right: 0.5rem;
+    font-size: 1.2rem;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .navbar {
+      flex-direction: column;
+      /* align-items: flex-start; */
+    }
+  
+    .navbar-links {
+      flex-direction: row;
+      gap: 0.5rem;
+      
+    }
+  
+    .navbar-link {
+      font-size: 1rem;
+    }
+  
+    .navbar-title {
+      margin-bottom: 1rem;
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+  }
+  

@@ -87,14 +87,18 @@
   }
   
   /* Responsive styles for mobile screens */
-  @media (max-width: 768px) {
+  @media (min-width:350px) and (max-width: 768px) {
     .container {
-      padding: 10px;  /* Reduce padding */
+      padding: 0px;  /* Reduce padding */
     }
   
     .card {
-      padding: 15px;  /* Adjust padding */
-      border-radius: 10px;
+      max-width: 350px;
+      background-color: #ffffff;
+      border-radius: 15px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      text-align: center;
     }
   
     .image-container {
@@ -102,13 +106,13 @@
     }
   
     .image {
-      height: 250px;  /* Adjust image height */
+      height: 200px;  /* Adjust image height */
       border-radius: 8px;
     }
   
     .title {
       font-size: 22px;  /* Reduce title size */
-      margin: 10px 0;
+      margin: 20px 0;
     }
   
     .detail {
@@ -124,32 +128,5 @@
       font-size: 14px;  /* Adjust link font size */
     }
   }
-  
-  @media (max-width: 480px) {
-    .card {
-      padding: 10px;  /* Smaller padding */
-    }
-  
-    .image-container {
-      height: 200px;  /* Smaller image height */
-    }
-  
-    .image {
-      height: 200px;
-    }
-  
-    .title {
-      font-size: 20px;
-    }
-  
-    .detail,
-    .description,
-    .location {
-      font-size: 13px;
-    }
-  
-    .link {
-      font-size: 12px;
-    }
-  }
+
   
