@@ -192,7 +192,7 @@ function Seemore() {
           </Slider>
 
           <h1 className={styles.title}>{workspace.title}</h1>
-          <p className={styles.detail}><strong>Price:</strong> {workspace.price}/hr</p>
+          <p className={styles.detail}><strong>Price:</strong> ₹{workspace.price}/hr</p>
           <p className={styles.description}>{workspace.description}</p>
           <p className={styles.description}><b>Location: </b>{workspace.locationName}</p>
           <p className={styles.description}>{workspace.sqft}sqft</p>
