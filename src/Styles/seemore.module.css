@@ -139,6 +139,17 @@
     .link {
       font-size: 14px;  /* Adjust link font size */
     }
+    .backButton {
+      margin-top: 20px;
+      padding: 16px 40px;
+      font-size: 1rem;
+      background: #007BFF;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-left: 8.5rem;
+    }
   }
 
   
