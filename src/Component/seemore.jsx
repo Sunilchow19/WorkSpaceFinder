@@ -1,14 +1,16 @@
 import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import Slider from "react-slick";  // Import Slider
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Heading from "./heading";
 import Footer from "./footer";
 import styles from "../Styles/seemore.module.css"
+import { Link } from "react-router-dom";
 
 function Seemore() {
   const { id } = useParams();
+  const navigate = useNavigate();
 
   const workspaceData = [
     {
@@ -199,6 +201,9 @@ function Seemore() {
           </a>
           
         </div>
+        <button className={styles.backButton} onClick={() => navigate(-1)}>
+            Back
+        </button>
         </div>
       ) : (
         <p>Loading...</p>
