@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { GoogleMap, LoadScript, Marker } from '@react-google-maps/api';
+import { useDispatch } from 'react-redux';
+import { loc } from '../Redux/global';
 
 const MapComponent = () => {
   const [currentLocation, setCurrentLocation] = useState(null);
   const [nearbyPlaces, setNearbyPlaces] = useState([]);
-
+  let dispatch=useDispatch()
   // Fetch user's current location
   useEffect(() => {
     navigator.geolocation.getCurrentPosition(
@@ -12,6 +14,8 @@ const MapComponent = () => {
         const { latitude, longitude } = position.coords;
         setCurrentLocation({ lat: latitude, lng: longitude });
         fetchNearbyPlaces(latitude, longitude); // Fetch places after getting location
+        let coordinates={latitude, longitude}
+        {dispatch(loc(coordinates))}
       },
       (error) => {
         console.error("Error obtaining location", error);
@@ -30,7 +34,7 @@ const MapComponent = () => {
     )
       .then(response => response.json())
       .then(data => {
-        setNearbyPlaces(data.results);
+        setNearbyPlaces(data.results);        
       })
       .catch(error => console.error("Error fetching places:", error));
   };
@@ -41,7 +45,7 @@ const MapComponent = () => {
   };
 
   if (!currentLocation) return <div>Loading map...</div>;
-
+  
   return (
     <LoadScript googleMapsApiKey="AIzaSyBdvoOfYo8V8ThFxzdTUGbWFFMK4P-UMTQ">
       <GoogleMap

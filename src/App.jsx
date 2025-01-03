@@ -5,18 +5,15 @@ import ContactForm from './Component/contact'
 import HomePage from './Component/homepage'
 import RateUsForm from './Component/rateus'
 import Seemore from './Component/seemore'
-
+import { store } from './Redux/store'
+import { Provider } from 'react-redux'
 function App() {
 
 
   return (
     <>
-
-    {/* <div className='app'>
-      <ContactForm/>
-    </div> */}
-    {/* <WorkspaceForm/> */}
-    <BrowserRouter>
+   <Provider store={store}>
+   <BrowserRouter>
     <Routes>
     <Route path="/" element={<HomePage />} />
 
@@ -27,6 +24,7 @@ function App() {
 
     </Routes>
     </BrowserRouter>
+   </Provider>
     </>
   )
 }
