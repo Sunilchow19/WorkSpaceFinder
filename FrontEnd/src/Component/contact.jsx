@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import '../Styles/contact.css';
+import axios from 'axios';
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -17,14 +18,24 @@ const ContactForm = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Simulate form submission
-    console.log('Form submitted:', formData);
-
-    // Reset form and show the popup
-    setFormData({ name: '', email: '', message: '' });
-    setShowPopup(true);
+  
+    try {
+      // Send form data to the backend
+      const response = await axios.post('http://localhost:5000/send-email', formData);
+  
+      if (response.data.success) {
+        console.log('Email sent successfully');
+        // Reset form and show the popup
+        setFormData({ name: '', email: '', message: '' });
+        setShowPopup(true);
+      } else {
+        console.error('Failed to send email:', response.data.message);
+      }
+    } catch (error) {
+      console.error('Error while sending email:', error);
+    }
   };
 
   const closePopup = () => {
