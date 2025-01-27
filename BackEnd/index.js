@@ -57,7 +57,7 @@ app.post('/api/newWorkspaces', upload.array('images', 5), async (req, res) => {
     } = req.body;
 
     // Generate full URLs for the uploaded images
-    const imagePaths = req.files.map(file => `http://localhost:5000/uploads/${file.filename}`);
+    const imagePaths = req.files.map(file => `https://workspacefinder.onrender.com/uploads/${file.filename}`);
 
     // Create a new workspace document
     const workspace = new Workspace({
