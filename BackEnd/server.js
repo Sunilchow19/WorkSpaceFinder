@@ -15,6 +15,6 @@ const workspaceSchema = new mongoose.Schema({
   longitude: { type: Number, required: true },
 });
 
-const Workspace = mongoose.model('Workspace', workspaceSchema);
+const Workspace = mongoose.model('users', workspaceSchema);
 
 module.exports = Workspace;

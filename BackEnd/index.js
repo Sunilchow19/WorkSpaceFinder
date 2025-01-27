@@ -7,11 +7,14 @@ const path = require('path');
 const fs = require('fs');
 const nodemailer = require('nodemailer');
 const bodyParser = require('body-parser');
+const dotenv=require('dotenv')
+
+dotenv.config()
 
 const app = express();
 
 // Connect to MongoDB
-mongoose.connect('mongodb://localhost:27017/workspacefinder', {
+mongoose.connect(process.env.Connection_String, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 })

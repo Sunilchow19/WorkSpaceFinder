@@ -189,11 +189,11 @@ function WorkSpaceFinder() {
       )}
 
       <h2 style={styles.heading}>Remaining Workspaces</h2>
-      <div style={styles.cardContainer}>
+      <div style={styles.cardContainer} >
         {remainingWorkspaces.length > 0 ? (
           remainingWorkspaces.map((workspace) => (
             <div key={workspace.id} style={styles.card}>
-              {console.log(workspace)}
+              {/* {console.log(workspace)} */}
               <img
                 src={workspace.image1 || (workspace.images && workspace.images[0])}
                 alt={workspace.title}

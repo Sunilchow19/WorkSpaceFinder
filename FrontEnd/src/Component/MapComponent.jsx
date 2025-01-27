@@ -1,70 +1,84 @@
 import React, { useState, useEffect } from 'react';
-import { GoogleMap, LoadScript, Marker } from '@react-google-maps/api';
-import { useDispatch } from 'react-redux';
-import { loc } from '../Redux/global';
+import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
+import axios from 'axios';
+import L from 'leaflet';
+import 'leaflet/dist/leaflet.css';
+import { useDispatch } from 'react-redux';  // Import useDispatch
+import { loc } from '../Redux/global';  // Import the loc action
+
+// Fix default Leaflet marker issue in React
+import markerIcon from 'leaflet/dist/images/marker-icon.png';
+import markerShadow from 'leaflet/dist/images/marker-shadow.png';
+
+const defaultIcon = L.icon({
+  iconUrl: markerIcon,
+  shadowUrl: markerShadow,
+  iconSize: [25, 41],
+  iconAnchor: [12, 41]
+});
 
 const MapComponent = () => {
+
   const [currentLocation, setCurrentLocation] = useState(null);
   const [nearbyPlaces, setNearbyPlaces] = useState([]);
-  let dispatch=useDispatch()
-  // Fetch user's current location
+  const dispatch = useDispatch();  // Initialize dispatch
+
   useEffect(() => {
     navigator.geolocation.getCurrentPosition(
-      (position) => {
+      async (position) => {
         const { latitude, longitude } = position.coords;
-        setCurrentLocation({ lat: latitude, lng: longitude });
-        fetchNearbyPlaces(latitude, longitude); // Fetch places after getting location
-        let coordinates={latitude, longitude}
-        {dispatch(loc(coordinates))}
+        setCurrentLocation([latitude, longitude]);
+        dispatch(loc({ latitude, longitude }));  // Dispatch latitude and longitude to Redux
+        await fetchNearbyPlaces(latitude, longitude);
       },
       (error) => {
         console.error("Error obtaining location", error);
       }
     );
-  }, []);
+  }, [dispatch]);  // Adding dispatch as a dependency to avoid potential issues
 
-  // Fetch nearby places from Google Places API
-  const fetchNearbyPlaces = (latitude, longitude) => {
-    const apiKey = 'AIzaSyBdvoOfYo8V8ThFxzdTUGbWFFMK4P-UMTQ'; // Your API key
-    const radius = 1000; // 1000 meters
-    const type = 'restaurant'; // Example: find restaurants
+  const fetchNearbyPlaces = async (latitude, longitude) => {
+    // Build the URL dynamically using the latitude and longitude
+    const url = `${process.env.REACT_APP_MAP_CONNECTION}&lon=${longitude}&lat=${latitude}`;
 
-    fetch(
-      `https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=${latitude},${longitude}&radius=${radius}&type=${type}&key=${apiKey}`
-    )
-      .then(response => response.json())
-      .then(data => {
-        setNearbyPlaces(data.results);        
-      })
-      .catch(error => console.error("Error fetching places:", error));
-  };
+    const options = {
+      method: 'GET',
+      headers: {
+        'x-rapidapi-key': process.env.REACT_APP_RAPID_API_KEY,
+        'x-rapidapi-host': process.env.REACT_APP_RAPID_API_HOST
+      }
+    };
 
-  const containerStyle = {
-    width: '100%',
-    height: '400px'
+    try {
+      const response = await axios.get(url, options);
+      setNearbyPlaces(response.data || []);
+    } catch (error) {
+      console.error("Error fetching places:", error);
+    }
   };
 
   if (!currentLocation) return <div>Loading map...</div>;
-  
+
   return (
-    <LoadScript googleMapsApiKey="AIzaSyBdvoOfYo8V8ThFxzdTUGbWFFMK4P-UMTQ">
-      <GoogleMap
-        mapContainerStyle={containerStyle}
-        center={currentLocation}
-        zoom={14}
-      >
-        <Marker position={currentLocation} />
-        {nearbyPlaces.map((place, index) => (
-          <Marker
-            key={index}
-            position={{
-              lat: place.geometry.location.lat,
-              lng: place.geometry.location.lng,
-            }}
-          />
-        ))}
-      </GoogleMap>
-    </LoadScript>
+    <MapContainer center={currentLocation} zoom={14} style={{ height: "400px", width: "100%" }}>
+      {/* OpenStreetMap Tile Layer */}
+      <TileLayer
+        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+        attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+      />
+
+      {/* User's Current Location */}
+      <Marker position={currentLocation} icon={defaultIcon}>
+        <Popup>You are here!</Popup>
+      </Marker>
+
+      {/* Nearby Places */}
+      {nearbyPlaces.map((place, index) => (
+        <Marker key={index} position={[place.point.lat, place.point.lon]} icon={defaultIcon}>
+          <Popup>{place.name || "Unknown Place"}</Popup>
+        </Marker>
+      ))}
+    </MapContainer>
   );
 };
 
