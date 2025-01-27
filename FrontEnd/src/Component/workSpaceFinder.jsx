@@ -19,7 +19,7 @@ function WorkSpaceFinder() {
 
   useEffect(() => {
     // Fetch workspace data from backend API
-    axios.get('http://localhost:5000/api/workspaces')
+    axios.get('https://workspacefinder.onrender.com/api/workspaces')
       .then((response) => {
         setWorkspaces(response.data); // Set the workspace data from the API
       })

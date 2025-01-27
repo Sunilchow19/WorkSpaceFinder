@@ -25,7 +25,7 @@ function RateUsForm() {
 
     try {
       // Send rating, feedback, and email to the backend
-      const response = await axios.post("http://localhost:5000/send-feedback", {
+      const response = await axios.post("https://workspacefinder.onrender.com/send-feedback", {
         rating: feedbackTexts[rating - 1],
         feedback,
         email,

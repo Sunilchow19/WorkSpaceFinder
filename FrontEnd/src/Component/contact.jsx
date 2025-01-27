@@ -23,7 +23,7 @@ const ContactForm = () => {
   
     try {
       // Send form data to the backend
-      const response = await axios.post('http://localhost:5000/send-email', formData);
+      const response = await axios.post('https://workspacefinder.onrender.com/send-email', formData);
   
       if (response.data.success) {
         console.log('Email sent successfully');

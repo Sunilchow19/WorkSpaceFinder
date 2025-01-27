@@ -46,7 +46,7 @@ const WorkspaceForm = () => {
       });
 
       // Send the request to the back end
-      const response = await axios.post('http://localhost:5000/api/newWorkspaces', formDataToSend, {
+      const response = await axios.post('https://workspacefinder.onrender.com/api/newWorkspaces', formDataToSend, {
         headers: {
           'Content-Type': 'multipart/form-data'
         }
