@@ -8,6 +8,7 @@ import Footer from "./footer";
 import styles from "../Styles/seemore.module.css"
 import { Link } from "react-router-dom";
 import axios from "axios";
+import Loading from "./loading";
 
 function Seemore() {
   const { id } = useParams();
@@ -82,7 +83,7 @@ function Seemore() {
         </button>
         </div>
       ) : (
-        <p>Loading...</p>
+        <p><Loading/></p>
       )}
     </div>
     {/* <Footer/> */}

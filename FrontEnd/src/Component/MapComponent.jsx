@@ -9,6 +9,7 @@ import { loc } from '../Redux/global';
 // Fix default Leaflet marker issue in React
 import markerIcon from 'leaflet/dist/images/marker-icon.png';
 import markerShadow from 'leaflet/dist/images/marker-shadow.png';
+import LoadingMap from './loadingMap';
 
 const defaultIcon = L.icon({
   iconUrl: markerIcon,
@@ -61,7 +62,7 @@ const MapComponent = () => {
     }
   };
 
-  if (!currentLocation) return <div>Loading map...</div>;
+  if (!currentLocation) return <div><LoadingMap/></div>;
 
   return (
     <MapContainer center={currentLocation} zoom={14} style={{ height: "400px", width: "100%" }}>

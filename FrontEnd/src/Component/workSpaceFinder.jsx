@@ -6,6 +6,7 @@ import Footer from "./footer";
 import MapComponent from "./MapComponent";
 import { useSelector } from "react-redux";
 import axios from "axios"; // Import axios for making HTTP requests
+import Loading from "./loading";
 
 function WorkSpaceFinder() {
   const data = useSelector((res) => res);
@@ -185,7 +186,11 @@ function WorkSpaceFinder() {
           </div>
         </>
       ) : (
-        <div style={styles.noResults}>No places available nearby.</div>
+        <div style={styles.noResults}>
+          <h2 style={styles.heading}>Near By WorkSpaces</h2>
+          <Loading/>
+          
+          </div>
       )}
 
       <h2 style={styles.heading}>Remaining Workspaces</h2>
@@ -210,7 +215,7 @@ function WorkSpaceFinder() {
             </div>
           ))
         ) : (
-          <div style={styles.noResults}>No remaining workspaces.</div>
+          <div style={styles.noResults}><Loading/></div>
         )}
       </div>
 
