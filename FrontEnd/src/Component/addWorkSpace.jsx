@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import '../Styles/WorkspaceForm.css'; // Import the CSS file
+import Heading from './heading';
 
 const WorkspaceForm = () => {
   const [formData, setFormData] = useState({
@@ -84,6 +85,8 @@ const WorkspaceForm = () => {
   };
 
   return (
+  <>
+  <Heading/>
     <div className="workspace-form-container">
       <h2>Add New Workspace</h2>
       <form onSubmit={handleSubmit} className="workspace-form">
@@ -209,6 +212,7 @@ const WorkspaceForm = () => {
         </div>
       )}
     </div>
+  </>
   );
 };
 

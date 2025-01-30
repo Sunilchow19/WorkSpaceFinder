@@ -16,7 +16,7 @@ const Heading = () => {
       <h1 className="navbar-title">Workspace Finder</h1>
       <ul className="navbar-links">
         <li>
-          <Link to="/home" className="navbar-link">
+          <Link to="/" className="navbar-link">
             <FaHome className="navbar-icon" />
             Home
           </Link>

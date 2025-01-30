@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import "../Styles/rateus.css";
+import Heading from "./heading";
 
 function RateUsForm() {
   const [rating, setRating] = useState(0);
@@ -51,7 +52,7 @@ function RateUsForm() {
   };
 
   const styles = {
-    container: { textAlign: "center", margin: "50px auto" },
+    container: { textAlign: "center"},
     emoji: { fontSize: "50px", cursor: "pointer", margin: "10px" },
     selectedEmoji: { fontSize: "60px", color: "#007BFF" },
     button: {
@@ -112,6 +113,8 @@ function RateUsForm() {
   };
 
   return (
+   <>
+   <Heading/>
     <div style={styles.container}>
       <h2 className="register-heading">
         <i>Rate Us</i>
@@ -169,6 +172,7 @@ function RateUsForm() {
         </div>
       )}
     </div>
+   </>
   );
 }
 

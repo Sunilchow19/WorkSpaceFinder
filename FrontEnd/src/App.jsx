@@ -16,9 +16,8 @@ function App() {
    <Provider store={store}>
    <BrowserRouter>
     <Routes>
-    <Route path="/" element={<HomePage />} />
 
-      <Route path='/home' element={<WorkSpaceFinder/>}/>
+      <Route path='/' element={<WorkSpaceFinder/>}/>
       <Route path='/contactus' element={<ContactForm/>}/>
       <Route path='/rateus' element={<RateUsForm/>}/>
       <Route path='/seemore/:id' element={<Seemore/>}/>

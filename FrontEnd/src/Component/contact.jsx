@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import '../Styles/contact.css';
 import axios from 'axios';
+import Heading from './heading';
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -43,6 +44,8 @@ const ContactForm = () => {
   };
 
   return (
+    <>
+      <Heading/>
     <div className="contact-form-container">
       <h2>Contact Us</h2>
       <form onSubmit={handleSubmit} className="contact-form">
@@ -97,6 +100,7 @@ const ContactForm = () => {
         </div>
       )}
     </div>
+    </>
   );
 };
 
