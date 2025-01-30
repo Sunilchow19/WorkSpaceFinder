@@ -25,6 +25,7 @@ body {
   .workspace-form {
     display: flex;
     flex-direction: column;
+    max-width: 585px;
   }
   
   .form-group {
@@ -109,6 +110,10 @@ body {
   @media (max-width: 768px) {
     .workspace-form-container {
       padding: 15px;
+    }
+
+    .workspace-form{
+      max-width: 345px;
     }
   
     .form-group input,
