@@ -104,16 +104,14 @@ body {
   .close-button:hover {
     background: #0056b3;
   }
-  
-  
-  /* Responsive styles */
-  @media (max-width: 768px) {
+  @media (min-width: 320px) and (max-width: 374px) {
     .workspace-form-container {
       padding: 15px;
+      max-width: 300px;
     }
-
-    .workspace-form{
-      max-width: 345px;
+  
+    .workspace-form {
+      max-width: 275px;
     }
   
     .form-group input,
@@ -121,10 +119,123 @@ body {
       font-size: 13px;
       padding: 8px;
     }
-  
+    
     .submit-button {
       font-size: 14px;
       padding: 8px 16px;
     }
   }
+
+  @media (min-width: 375px) and (max-width: 419px) {
+    .workspace-form-container {
+      padding: 15px;
+    }
   
+    .workspace-form {
+      max-width: 330px;
+    }
+  
+    .form-group input,
+    .form-group textarea {
+      font-size: 13px;
+      padding: 8px;
+    }
+    
+    .submit-button {
+      font-size: 14px;
+      padding: 8px 16px;
+      
+    }
+  }
+  
+  
+  
+  /* Responsive styles */
+  
+  /* Extra small devices (phones, 320px - 575px) */
+@media (min-width: 420px) and (max-width: 575px) {
+  .workspace-form-container {
+    padding: 15px;
+  }
+
+  .workspace-form {
+    max-width: 375px;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    font-size: 13px;
+    padding: 8px;
+  }
+  
+  .submit-button {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+}
+
+/* Small devices (576px - 767px) */
+@media (min-width: 576px) and (max-width: 767px) {
+  .workspace-form-container {
+    padding: 15px;
+  }
+
+  .workspace-form {
+    max-width: 580px;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    font-size: 13px;
+    padding: 8px;
+  }
+
+  .submit-button {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+}
+
+/* Medium devices (768px - 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+  .workspace-form-container {
+    padding: 15px;
+  }
+
+  .workspace-form {
+    max-width: 580px;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    font-size: 13px;
+    padding: 8px;
+  }
+
+  .submit-button {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+}
+
+/* Large devices (992px - 1200px) */
+@media (min-width: 992px) and (max-width: 1200px) {
+  .workspace-form-container {
+    padding: 15px;
+  }
+
+  .workspace-form {
+    max-width: 550px;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    font-size: 13px;
+    padding: 8px;
+  }
+
+  .submit-button {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+}
